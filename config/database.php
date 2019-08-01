@@ -3,8 +3,6 @@
 use Illuminate\Support\Str;
 
 
-$heroku_db_url = parse_url(env('DATABASE_URL', "postgres://zyvwmligpdnwhe:e46e60dd0f88ebae3143f431ca71664e869aeb305e9d3c0cc85863c6d6f8f6bd@ec2-174-129-209-212.compute-1.amazonaws.com:5432/d6e5vgkoocgt36"));
-
 return [
 
     /*
