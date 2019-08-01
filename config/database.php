@@ -49,7 +49,7 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST1', '127.0.0.1'),
+            'host' => env('DB_HOST1', 'https://db4free.net/'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE1', 'forge'),
             'username' => env('DB_USERNAME1', 'forge'),
