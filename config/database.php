@@ -48,12 +48,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => 'db4free.net',
-            'host' => 'db4free.net',
-            'port' => env('DB_PORT', '3306'),
-            'database' => 'coffeap1',
-            'username' => 'coffeap1',
-            'password' => 'secret123',
+            'url' => 'remotemysql.com',
+            'host' => 'remotemysql.com',
+            'port' => '3306',
+            'database' => 'OEdtkJkyCd',
+            'username' => 'OEdtkJkyCd',
+            'password' => 'H7AgJf7OfU',
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
