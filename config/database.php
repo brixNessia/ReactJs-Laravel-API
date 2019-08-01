@@ -48,12 +48,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST1', 'db4free.net'),
+            'url' => 'db4free.net',
+            'host' => 'db4free.net',
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE1', 'forge'),
-            'username' => env('DB_USERNAME1', 'forge'),
-            'password' => env('DB_PASSWORD1', ''),
+            'database' => 'coffeap1',
+            'username' => 'coffeap1',
+            'password' => 'secret123',
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
