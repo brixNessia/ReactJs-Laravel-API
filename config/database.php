@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Str;
 
-
 return [
 
     /*
@@ -46,8 +45,8 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => 'https://db4free.net/',
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'url' => env('DATABASE_URL'),
+            'host' => 'https://db4free.net',
             'port' => env('DB_PORT', '3306'),
             'database' => 'coffeap1',
             'username' => 'coffeap1',
@@ -63,17 +62,6 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-
-        // 'pg-heroku' => [
-        //     'driver'   => 'pgsql',
-        //     'host'     => $heroku_db_url['host'],
-        //     'database' => substr($heroku_db_url['path'], 1),
-        //     'username' => $heroku_db_url['user'],
-        //     'password' => $heroku_db_url['pass'],
-        //     'charset'  => 'utf8',
-        //     'prefix'   => '',
-        //     'schema'   => 'public',
-        // ],
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
