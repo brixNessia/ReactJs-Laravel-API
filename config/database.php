@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Str;
 
+
+$heroku_db_url = parse_url(env('DATABASE_URL', "postgres://zyvwmligpdnwhe:e46e60dd0f88ebae3143f431ca71664e869aeb305e9d3c0cc85863c6d6f8f6bd@ec2-174-129-209-212.compute-1.amazonaws.com:5432/d6e5vgkoocgt36"));
+
 return [
 
     /*
@@ -46,11 +49,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => 'https://db4free.net',
+            'host' => env('DB_HOST1', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => 'coffeap1',
-            'username' => 'coffeap1',
-            'password' => 'secret123',
+            'database' => env('DB_DATABASE1', 'forge'),
+            'username' => env('DB_USERNAME1', 'forge'),
+            'password' => env('DB_PASSWORD1', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
