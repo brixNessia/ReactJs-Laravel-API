@@ -31,10 +31,5 @@ class HomeController extends Controller
     
     public function currentUser()
     {
-//         return User::all();
-        return Auth::user();
-//         return response()->json([
-//             'user_id' => $user->id,
-//             'user_name' => $user->name
-//         ]);
-}
+        dd('in');
+    }
