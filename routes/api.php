@@ -13,7 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('currentUser','HomeController@currentUser');
+Route::middleware('auth:api')->get('/currentUser', function (Request $request) {
+    return response()->json(['user' => 'fuck');
+});
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
