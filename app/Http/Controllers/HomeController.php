@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->only(['index']);
         $this->middleware('auth:api')->only(['currentUser']);
     }
 
@@ -31,13 +31,12 @@ class HomeController extends Controller
     
     public function currentUser()
     {
-        
-        return User::all();
-//         $user = Auth::user();
-//         return response()->json([
-//             'user' => [
-//                 'user_id' => $user->id,
-//                 'user_name' => $user->name
-//             ]
-//         ]);
+//         return User::all();
+        $user = Auth::user();
+        return response()->json([
+            'user' => [
+                'user_id' => $user->id,
+                'user_name' => $user->name
+            ]
+        ]);
 }
