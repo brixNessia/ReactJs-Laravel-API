@@ -29,7 +29,7 @@ class HomeController extends Controller
         return view('home');
     }
     
-    public function currentUser()
+    public function currentUser(Request $request)
     {
-        dd('in');
+        return Auth::user()->id;
     }
