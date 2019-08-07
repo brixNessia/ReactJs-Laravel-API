@@ -41,7 +41,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(SaveUserRequest $request)
+    public function store(Request $request)
     {
         $this->repo->createUser($request->all());
         return response()->json(['message' => 'User Registered']);
