@@ -13,8 +13,7 @@ class UserRepository
         $user['password'] = Hash::make($data['password']);
         $user['email'] = $data['email'];
         
-        return 'asd';
-        // return $user->save($data);
+        return $user->save($data);
     }
     
 
