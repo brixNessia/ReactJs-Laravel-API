@@ -26,7 +26,7 @@ class SaveUserRequest extends FormRequest
         return [
             'first_name' => 'required',
             'last_name' => 'required',
-            'email' => 'required|email|unique:pgsql.schema.users',
+            'email' => 'required|email',
             'password' => 'required',
         ];
     }
